@@ -1,32 +1,22 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include "src/helpers.h"
 
 
-void printArr(int arr[], int size);
 void shellSort(int arr[], int size);
 
 int main(){
 
-  int arr[] = {4, 1, 3, 76, 2, 9};
-  int size = 6;
-
   printf("Before Sort: ");
-  printArr(arr, size);
+  printArr(test_arr, test_size);
   
   printf("\n");
   printf("After Sort: ");
-  shellSort(arr, size);
-  printArr(arr, size);
+  shellSort(test_arr, test_size);
+  printArr(test_arr, test_size);
 
 }
 
-void printArr(int arr[], int size){
 
-  for(int i = 0; i < size; i++){
-
-    printf("%d ", arr[i]);
-  }
-}
 
 void shellSort(int arr[], int size){
   
