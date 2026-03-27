@@ -45,12 +45,13 @@ void selectionSort(Array *A){
   int i, j, min;
 
   for(i = 0; i < MAX; i++){
-    min = i;
-    for(j = i + 1; j < MAX; j++){
-      if(A->arr[i] > A->arr[j]){
+    min = i;// Set minimum as i
+    for(j = i + 1; j < MAX; j++){// traverse the array after the ith index
+      if(A->arr[i] > A->arr[j]){// Find elements that are greater than arr[i] and then set it as minimum
         min = j;
       }
     }
+    // This code block basically just swaps the elements after finding the minimum
     int temp;
     temp = A->arr[i];
     A->arr[i] = A->arr[min];

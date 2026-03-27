@@ -21,11 +21,12 @@ int main(){
 void shellSort(int arr[], int size){
   
   int gap;
-  for(gap = size / 2; gap > 0; gap /= 2){
-    
+  for(gap = size / 2; gap > 0; gap /= 2){ // Divide the gap by 2 to shrink it
+
     int i;
+
     for(i = gap; i < size; i++){
-      
+
       int temp = arr[i];
       int j;
       for(j = i; j >= gap && arr[j - gap] > temp; j-=gap){

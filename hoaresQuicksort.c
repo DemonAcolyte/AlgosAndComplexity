@@ -22,6 +22,7 @@ int partition(int arr[], int low, int high){
   int mid = (low + high) / 2;
   int pivot = arr[mid];
   while(1){
+  
   do{
     i++;
   }while(arr[i] < pivot);

@@ -45,8 +45,8 @@ void bubbleSort(Array *A){
     
   for(i = 0; i < MAX; i++){
 
-    for(j = 0; j < MAX - 1; j++){
-      if(A->arr[j] > A->arr[j + 1]){
+    for(j = 0; j < MAX - 1; j++){ // Compare adjacent elements
+      if(A->arr[j] > A->arr[j + 1]){ // Basically compare elements if arr[j] > arr[j + 1] then swap
         temp = A->arr[j];
         A->arr[j] = A->arr[j + 1];
         A->arr[j + 1] = temp;

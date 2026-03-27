@@ -2,6 +2,12 @@
 #include <stdlib.h>
 
 
+typedef struct node{
+
+  int data;
+  struct node *next;
+}*List;
+
 
 int test_arr[] = {3, 1, 5, 2, 9, 8, 7, 0};
 int test_size = 8;
@@ -20,3 +26,30 @@ void swap(int *a, int *b){
   *a = *b;
   *b = temp;
 }
+
+void push(List *S, int data){
+
+  List temp = (List)malloc(sizeof(struct node));
+
+  if(temp != NULL){
+    temp->data = data;
+    temp->next = *S;
+    *S = temp;
+  }
+}
+
+void pop(List *S, int data){
+
+  List temp = *S;
+  
+  if(temp != NULL){  
+    *S = temp->next;
+    free(temp);
+  }
+}
+
+int top(List S){
+  return (S == NULL)? -1 : S->data;
+}
+
+
